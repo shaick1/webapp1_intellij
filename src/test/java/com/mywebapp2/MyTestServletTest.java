@@ -12,23 +12,13 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import org.junit.*;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+
 
 import static org.junit.Assert.*;
 
 public class MyTestServletTest {
 
-    @Mock
-    HttpServletRequest request;
 
-    @Mock
-    HttpServletResponse response;
-
-    @Before
-    public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
-    }
 
     @org.junit.Test
     public void myStatus() {
