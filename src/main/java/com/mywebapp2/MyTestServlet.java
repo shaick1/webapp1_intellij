@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+
 @WebServlet("/firstservlet2")
 public class MyTestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,6 +26,11 @@ public class MyTestServlet extends HttpServlet {
             PrintWriter pw = response.getWriter();
             pw.println("My first servlet call - GET");
             pw.close();
+
+    }
+
+    public String myStatus() {
+        return "ACTIVE";
 
     }
 }
