@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>mysamplewebproject2</artifactId>
+    <version>1.0</version>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <packaging>war</packaging>
+    <build>
+    <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+            <webXml>src/webapp/WEB-INF/web.xml</webXml>
+            <webResources>
+                <resource>
+                    <!-- this is relative to the pom.xml directory -->
+                    <directory>src/resources</directory>
+                    <!-- the list has a default value of ** -->
+                    <!--includes>
+                        <include>index1.jpg</include>
+                    </includes-->
+                </resource>
+            </webResources>
+        </configuration>
+    </plugin>
+    </plugins>
+
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Internal repo</name>
+            <url>file:///tmp/</url>
+        </repository>
+    </distributionManagement>
+</project>
