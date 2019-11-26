@@ -49,11 +49,11 @@ public class MyTestServletSelTest {
         String expected_data = "My first test page";
         String bodyText = driver.findElement(By.xpath("//body")).getText();
         Assert.assertTrue(bodyText.contains(expected_data),"Text not found!");
-        driver.findElement(By.id("getcall")).click();
+      /*  driver.findElement(By.id("getcall")).click();
         Thread.sleep(5000);
         driver.get(baseUrl);
         driver.findElement(By.id("postcall")).click();
-        Thread.sleep(5000);
+        Thread.sleep(5000);*/
 
 
     }
