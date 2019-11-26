@@ -13,7 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MyTestServletSelTest {
 
     private WebDriver driver;
-    private String baseUrl="http://slc06eou.us.oracle.com:8081/mysamplewebproject2-1.0/index.jsp";
+
+    //private String baseUrl="http://slc06eou.us.oracle.com:8081/mysamplewebproject2-1.0/index.jsp";
+    private String baseUrl="http://localhost:8190/mysamplewebproject2-1.0/index.jsp";
+
     public static void main(String args[]) throws Exception {
         MyTestServletSelTest myProdVerify = new MyTestServletSelTest();
         try {
@@ -39,7 +42,7 @@ public class MyTestServletSelTest {
 
     }
 
-    //@Test
+    @Test
     public void testProdVerify() throws Exception {
         //TODO - add validation content
         Thread.sleep(5000);
