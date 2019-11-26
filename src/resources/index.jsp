@@ -12,10 +12,10 @@
   </head>
   <body>
   My first test page1<br><br><br>
-  <a href="/mysamplewebproject2-1.0/firstservlet2"> Call GET Servlet</input>
+  <a id="getcall" href="/mysamplewebproject2-1.0/firstservlet2"> Call GET Servlet</input>
 <br><br><br>
       <form action="/mysamplewebproject2-1.0/firstservlet2" method="post">
-      <input type="submit">
+      <input id="postcall" type="submit">
     </form>
   </body>
 </html>

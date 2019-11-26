@@ -39,13 +39,20 @@ public class MyTestServletSelTest {
 
     }
 
-    @Test
+    //@Test
     public void testProdVerify() throws Exception {
         //TODO - add validation content
         Thread.sleep(5000);
         String expected_data = "My first test page";
         String bodyText = driver.findElement(By.xpath("//body")).getText();
         Assert.assertTrue(bodyText.contains(expected_data),"Text not found!");
+        driver.findElement(By.id("getcall")).click();
+        Thread.sleep(5000);
+        driver.get(baseUrl);
+        driver.findElement(By.id("postcall")).click();
+        Thread.sleep(5000);
+
+
     }
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
