@@ -29,7 +29,7 @@ public class MyTestServletSelTest {
 
     }
 
-    //@BeforeClass(alwaysRun = true)
+    @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         System.setProperty("webdriver.gecko.driver","/tmp/geckodriver");
         driver = new FirefoxDriver();
@@ -39,7 +39,7 @@ public class MyTestServletSelTest {
 
     }
 
-    //@Test
+    @Test
     public void testProdVerify() throws Exception {
         //TODO - add validation content
         Thread.sleep(5000);
@@ -47,7 +47,7 @@ public class MyTestServletSelTest {
         String bodyText = driver.findElement(By.xpath("//body")).getText();
         Assert.assertTrue(bodyText.contains(expected_data),"Text not found!");
     }
-    //@AfterClass(alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         driver.quit();
     }
